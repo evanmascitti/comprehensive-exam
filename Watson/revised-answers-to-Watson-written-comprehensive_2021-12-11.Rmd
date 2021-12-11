@@ -294,15 +294,6 @@ Provide the HYDRUS graph in a WORD document which shows concentration in soil so
 
 It appears that the concentration reaches 0.1 ng cm^3^ after about 100 days. I'd be able to tell better if I could re-size the axis, but can't figure out how to do this, or how to export the data. I tried opning the tab-delimited file `solute-1.out` but there is no metadata about what the column names mean, and it's not formatted in a way that makes it easy to parse either using Excel or R. 
 
-
-```{r }
-knitr::include_graphics(here::here("Watson/hydrus/watson-comprehensive/solute-transport-graphs/solute-contentration-200-days-10-print-times.png"))
-```
-
-
-<!-- Can't figure out how to change axis limits....I suppose what you are getting at is that the concentration might be continuing to change, even though the graph does not show this at the default scale.  -->
-
-
 ```{r}
 knitr::include_graphics(here::here("Watson/hydrus/watson-comprehensive/solute-transport-graphs/solute-contentration-200-days-10-print-times.png"))
 ```
