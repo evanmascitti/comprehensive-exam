@@ -1,0 +1,52 @@
+---
+title: "A plan to maintain and increase my knowledge this year"
+subtitle: "Focused on comprehensive exam preparation, but generally applicable to professional growth"
+date: "Outlined 2021-03-17; last compiled `r Sys.Date()`"
+output: 
+  html_document:
+    keep_md: false
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(
+  message = F,
+  warning = F,
+  error = F,
+  echo = F,
+  fig.align = 'center',
+  out.width = "95%"
+)
+knitr::opts_knit$set(root.dir = getwd())
+```
+
+## Summary
+
+- I want to gradually chunk out some study time for reviewing the topics covered in the classes I took from my committee members.
+
+- This will help prepare me for my comprehensive exam and also generally maintain my knowledge about these topics. 
+
+- I also need to continue reading papers and learning skills
+
+- Structuring time for these activities ensures they will get done.
+
+- I will study each Monday morning for one hour, preferably between 9 and 10 AM. 
+
+- I will read journal papers for one hour each Tuesday morning, preferably between 9 and 10 AM. 
+
+- I will learn/practice computing skills for one hour each Wednesday morning, preferably between 9 and 10 AM. 
+
+- The schedule is outlined below.
+
+
+```{r study-plan, child='study-plan_2021-03-17.Rmd'}
+
+```
+
+
+
+
+```{r learning-plan, child='stuff-to-learn-March-2021.Rmd'}
+
+```
+
+

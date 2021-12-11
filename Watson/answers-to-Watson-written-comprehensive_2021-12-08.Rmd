@@ -1,0 +1,271 @@
+---
+title: "Dr. Jack Watson written comprehensive answers"
+author: "Evan C. Mascitti"
+date: "`last compiled `r Sys.time()``"  
+mainfont: Roboto
+bibliography: library.bib
+linestretch: 1.25
+colorlinks: true
+linksasnotes: false
+linkcolor: blue
+urlcolor: blue
+toc: false 
+output:
+  bookdown::word_document2:
+    number_sections: false
+    reference_docx: word-formatting-template.docx
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    number_sections: false
+    includes: 
+      in_header: preamble.tex 
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  # fig.align = 'center',
+  out.width = '60%')
+
+library(magrittr)
+```
+
+
+
+Evan’s Comprehensive Written questions from Jack
+
+
+All questions are open book. 
+
+
+I believe I developed a set of questions which should challenge you, but not overwhelm you. If you find it has been too long since you used HYDRUS to make good progress on it, don’t be discouraged. I recognize there are so many details related to it that trying to remember them all is challenging. The key ideas (of the HYDRUS questions) are related to soil solution vs soil matrix concentrations of sorbed chemicals, the kinds of information that can be obtained (and what can’t be obtained) from the HYDRUS model, and the parameters that are important in setting up the model.
+
+
+
+
+1) There are 3 equations we talk about quite often in soil physics as it relates to water movement. One is Darcy’s Law, one is the Buckingham-Darcy equation, and one is Richards’ equation. Write out each of these equations and identify the names of the terms used in each equation. Then, explain how the 3 equations are different from each other and when we would use one versus another. (This is not to be a long explanation – just enough to confirm you know under what circumstances to use each equation).
+
+
+
+
+### Darcy's Law
+
+$$J_w = -K_{(sat)} \frac{dH}{dz}$$
+
+where 
+$J_w$ is volume of water discharged,
+$K_{(sat)}$ is the saturated hydraulic conductivity,
+$I$ is the hydraulic gradient (change in potential energy per unit distance), 
+$z$ is elevation above a reference point, and 
+$H$ is the total potential head (pressure + elevation, i.e. z + h)
+<!-- $A$ is the cross-sectional area through which the water flows.  -->
+
+### Buckingham-Darcy
+
+$$J_w = -K_{(h)} \frac{\partial H}{\partial z}  = -K_{(h)} \left( \frac{\partial h}{\partial z} + \frac{\partial z}{\partial z} \right) =  -K_{(h)} \left( \frac{\partial h}{\partial z} + 1 \right)$$
+where 
+$K_{(h)}$ is the hydraulic conductivity, which varies as a function of the hydraulic head,
+
+
+### Richards 
+
+
+$$\frac{\partial\theta_{(h)}}{\partial t}= \frac{\partial}{z}\left( K_{(h)} \frac{\partial h}{\partial z}\right) + \frac{\partial K_{(h)}}{\partial z} - S_{(h)}$$
+where $\theta_{(h)}$ is the water content as a function of head,
+$t$ is the time interval over which the flow occurs, and 
+$S_{(h)}$ is a source or sink function describing additions or subtractions of water from the system, such as plant roots.
+
+
+### Comparison of the 3 equations 
+
+Darcy's Law is the simplest solution for water flow. This equation was originally developed through empirical column tests by H. Darcy. I believe that his findings were later validated by the Navier-Stokes equations, which are a more general set of expressions treating fluid flow. 
+
+
+Darcy's Law assumes that the flux of water is constant and that the soil is fully saturated. All pressures are either zero or positive. The hydraulic conductivity is constant throughout the area of interest.
+
+
+The Buckingham equation extends/modifies Darcy's Law to work for unsaturated conditions. The major difference is that hydraulic head is no longer constant. However, the equation still assumes a constant flux of water through the profile. In other words, the water content is the same with respect to depth at any given time. In an unsaturated soil, the water is held under tension or suction. Therefore, some pressures will be negative. The conductivity will be lower as water content decreases because the cross-sectional area through which the water can flow becomes smaller. 
+
+
+
+The Richards equation is the most complete of the three but also the most complex. This equation does not assume constant flux - the water flux varies as a function of both time and space, and so does the conductivity. 
+
+
+
+When we can safely assume that the soil is saturated (for example, below the water table), Darcy's Law is applicable. The Buckingham equation can be applied for unsaturated conditions _if_ the boundary conditions are held constant so that the flux density does not vary with time or space. In reality this is an unrealistic assumption for most soils, especially at the surface where temperature, vapor pressure, and the presence of free water all affect the boundary condition. The Richards equation should be used when the flow is transient, and the initial and boundary conditions are known. 
+
+
+
+
+2) Most of our scientific journals require that we estimate a probability of being wrong no greater than 5% in stating two treatments are different from each other. Suppose you were talking with a group of NFL field managers explaining some of your findings. Suppose the probability was 10% that you would be wrong concluding there was a difference between two treatments which you had compared. Would you tell them there was no difference between treatments or would you tell them something different? Explain your reasoning.
+
+
+
+P-values are a contentious topic. To understand their value and limitations it is useful to consider their origin. R.A. Fisher is credited with inventing (or at least popularizing) the concept. Basically, he felt that a 1 in 20 chance of obtaining results equivalent to the actual data was a good measure of confidence. He allowed that this threshold was arbitrary and bore no fundamental importance,  although some have argued the choice was less arbitrary than commonly assumed [@Cowles1982]. In either case, I doubt whether Fisher intended for the 0.05 threshold to become the gospel that it has. 
+
+
+In my view, p-values should be only one line of evidence in advancing a concept. I read a highly compelling paper earlier this year [@McShane2019] arguing that statistical significance be entirely discarded. Instead, p-values should be treated as continuous data (which, of course, they already are). What the paper did _not_ says is that we should abandon statistics, or stop calculating p-values. The core message is that we ought to avoid bifurcating our findings into "significant" and "not significant." I strongly agree with this view. Using this paradigm, findings with probability of being different of 5% vs. 10% would be _quantitatively_ different, but not _categorically_ different. Careful observations made by the researcher while the data were collected can also be very useful. There is no doubt that scientific process should be as objective as possible, but I believe observations - even if not purely quantitative - comprise useful information.
+
+
+Should we discard useful findings simply because they do not meet an arbitrary threshold? Research is expensive in both time and money If a study creates a useful new idea, and the statistics are also compelling but _not quite "significant"_, I believe it ought to be treated as a _tentatively_ "true" result....but with the understanding that it can easily be unseated later if new evidence is uncovered. 
+
+
+This is a rather lengthy and indirect answer, but when presenting the findings to the field managers, I would explain that while we can never be certain, our current best guess is to recommend the treatment. Agriculture encompasses a lot of moving parts. When growing high-value turf, there are many ways to fail and few ways for things to go right. In that light, anything that has a 90% chance of causing even a marginal improvement is an important finding. 
+
+
+
+
+3) Former Senator John Kyl was named to replace Senator McCain in the US Senate for the several months after the passing of Senator McCain. You work for Senator Kyl’s Water Center in Arizona looking at water and soil resource issues. The word goes out from your boss that no reports are to be made public until after Senator Kyl’s term in office has been completed. However, you just finished a manuscript demonstrating that the Department of Transportation’s practices are causing enhanced silting of Roosevelt Lake and reducing its ability to store water from snowmelt. Arizona is in the midst of a 15 year drought and addressing water availability losses are a major concern to the state. The state legislature is considering legislation that would require state agencies to evaluate how their practices may be causing reductions in water availability to the 4.5 million people living in Phoenix.
+How would you respond to your boss’s demands? Explain what you would do, what you would say, and how you would justify your actions.
+
+
+
+This is a difficult ethical dilemma. My first course of action would be to address the issue directly with my boss. I always feel it is best to be direct and honest before pursuing other actions. I would explain the results of my research and that it could affect the health and safety of Sen. Kyl’s constituents. Perhaps he would change his mandate after learning the importance of the findings. Perhaps we could reach a compromise. 
+
+
+If I were utterly refused, I would educate myself on the legal ramifications of publishing the work. I am admittedly ignorant on the legal nature of this question. However, my intuition is that my boss’s order is probably illegal – I would be surprised if scientific findings can be suppressed, especially if funded by taxpayer dollars. 
+
+
+I truly can’t say with any certainty what I would do at this point. I would like to say that I’d publish the paper no matter what my boss’s nefarious intentions. I like to think I am loyal to the pursuit of truth above all else. However in reality I can’t say that with 100% confidence. It would be awfully hard to take this plunge if I thought I would lose my job, and that maybe the research could still be published in a few years. If viewed in a dispassionate way, how does one compare the marginal utility (to invoke some economist jargon) of releasing a single scientific finding, which may or may not have any bearing on actual policy action, with the risk of losing the ability to support my family? I would need to experience the full context of the situation to decide. I think we all know what we would _like_ to do, but while the scientific process itself is perfect, it is carried out by humans....with all of our flaws, biases, and complexities. 
+
+
+
+
+
+
+
+4) In your work at the Kyl Water Center you have been tasked to help determine the likelihood contamination of the groundwater used by the City of Gilbert as a result of a “Riparian Preserve” which infiltrates Gilbert’s wastewater over a 100 acre area which has been developed as a wetland. You can find info on the web at: \url{https://www.gilbertaz.gov/departments/parks-and-recreation/riparian-preserve-at-water-ranch} if you want. The actual infiltration area is comprised of seven 10-acre basins. The treatment capacity of the Wastewater Treatment Plant is greater than the actual amount of effluent produced at present. For future planning needs, however, the plant was designed to deliver a maximum of 11 million gallons per day of effluent to be infiltrated at the Riparian Preserve.
+
+
+Research work conducted at the site indicates that the surface 30 cm of soil of the infiltration basins has an Organic Carbon content of 1.5%. Below that the average Organic Carbon content of the soil is about 0.1%, to the groundwater, which exists at a depth of approximately 30 meters. The available soil water holding capacity, saturated water content, and hydraulic conductivity of the basins is quite similar to what would be expected of a sandy loam soil, through the entire depth of the vadose zone overlying the groundwater table.
+
+
+The average Organic Carbon Sorption Coefficient (Koc) for two prevalent PFAs (PFOA and PFOS) might be approximated to be about 2.5 L kg-1. (Note that this is really LOW compared to other organics such as pesticides for which Koc might be 1500 L kg-1 !) (Recall that the units on Koc are L of soil solution per kg of soil organic carbon).
+(one reference that may help if you want some background, but you don’t need to refer to it if you don’t want is:)
+https://www.researchgate.net/publication/51052842_Effects_of_salinity_and_organic_matter_on_the_partitioning_of_perfluoroalkyl_acid_PFAs_to_clay_particles 
+
+
+
+
+4a) On AVERAGE, how much water per day per hectare (i.e. cm day-1 ha-1) must infiltrate the soil surface of the riparian preserve to ensure all the water infiltrates each day if the Wastewater treatment plant was operating at full capacity.
+
+
+<!-- $$ \require{cancel} \frac{11 \times 10^6 ~ \cancel{gal} }{70 ~ \cancel{acre}} \times \frac{2.47 ~ \cancel{acre}}{1 ~ ha} \times \frac{3785.41 cm^3}{1 ~ \cancel{gal}} \times \frac{1 ~ \cancel{ha}}{1 \times 10^8 cm^2} =  \text{14.69 cm ha}^1 \text{ per day}$$ -->
+
+
+```{r}
+knitr::include_graphics(here::here("Watson/flux-calculation-failed-latex.png"))
+```
+
+
+
+
+
+4b) Identify the soil parameters (and their estimates) you will use to run HYDRUS 1-D to estimate the time it takes for infiltrating water from the soil surface to arrive at the groundwater, assuming the plant was operating at full capacity.
+
+
+
+### Hydraulic model 
+
+- using van Genuchten - Mualem porosity model; leaving all the following parameters at their default values for a sandy loam soil texture.
+
+- Q~r~ (residual water content, i.e. $\theta$ at -1500 kPa tension)
+  - estimate: 0.065
+
+- Q~s~ (saturated water content, i.e. $\theta$ when all pores are water-filled
+- estimate: 0.41
+
+- $\alpha$ (a fitting parameter for the van Genuchten water retention curve model)
+  - estimate: 7.5
+
+- n (fitting parameter for moisture retention curve)
+  - estimate: 1.89
+  
+- $K_{sat}$: saturated hydraulic conductivity in meters per day
+  - estimate: 1.061
+  
+- $I$: tortuosity parameter
+  - estimate: 0.5
+  
+  
+
+4c) As I’m sure you recall; the constant flux boundary value is a negative when we have an infiltration scenario. What is the rationale for that boundary to be negative?
+
+
+The flux is negative because the water is flowing downward. 
+
+
+4d) Run Hydrus 1-D for 100 days, then run it for 200 days, for water transport only. In each case (100 days and 200 days) set the number of equal time increments to 10. In selecting boundary conditions assume the lower boundary is “Free Drainage”, and the upper boundary is “Constant Flux”. Assume the matric potential is -100 cm throughout the soil profile and vadose zone, initially. Print out the following graphs (from the Water Flow outputs) into a WORD document to submit: Actual Surface Flux; Bottom Flux; Cumulative Actual Surface Flux; Cumulative Bottom Flux; Surface Pressure Head; Bottom Pressure Head; Soil Water Storage. At approximately what day does the water content at the 3000 cm depth equal the increased water content of the soil above it? How do you know (I’m less concerned about how PRECISE you are than in “how do you know”)? Would you consider that this is the same as the time at which the first drop of infiltrated water reached the 3000 cm depth? Explain.
+
+
+I am bogged in the mechanics of Hydrus. The only way I can get the simulation to converge is by setting the boundary flux to zero. This is the default, but I am not clear on the physical meaning of this parameter....possibly I could imagine this meaning that at the _beginning_ of the simulation, there is no flux at that initial instant....but it seems from question 4a that the constant flux should be set as 0.147 meters per day. When I use that value the model will not converge. Therefore, I made the following graphs (shown for the 100-day length only) using a flux of 0. However, at both the 100-day and 200-day lengths this shows that no water reaches the 3000 cm (30 m) depth, so according to these results the water content at the 3000 cm depth never changes over the 100-day simulation.  
+
+I will still try to answer the second part of this question.....I would _not_ consider this as the same time that the first drop of infiltrated water reaches the 30 m depth. If the water truly flowed in "piston-flow" fashion it might be the case - but in reality there will be some unsaturated flow downward before the saturated wetting front advances to the specified depth. 
+
+```{r print-hydrus-water-flow-graphs, fig.show='hold'}
+
+hydrus_graph_paths <- list.files(
+  path = here::here("Watson", "hydrus-graphs", "water-flow-only"),
+  full.names = TRUE
+) 
+
+# purrr::map(knitr::include_graphics)
+
+knitr::include_graphics(hydrus_graph_paths[[1]])
+
+knitr::include_graphics(hydrus_graph_paths[[2]])
+
+knitr::include_graphics(hydrus_graph_paths[[3]])
+
+knitr::include_graphics(hydrus_graph_paths[[4]])
+
+knitr::include_graphics(hydrus_graph_paths[[5]])
+
+knitr::include_graphics(hydrus_graph_paths[[6]])
+
+knitr::include_graphics(hydrus_graph_paths[[7]])
+
+```
+
+
+
+5) Assume that the PFAs don’t degrade. (These are often referred to as “forever chemicals” which degrade very slowly under natural conditions)! 
+Run HYDRUS 1-D again but this time include chemical transport, using estimated, average values for the sorption coefficients (2.5 L/kg = 2.5 cm3/g OC) of the PFAs referenced above (so assume PFOA and PFOS behave exactly the same) and assume that the SUM TOTAL concentration of the PFAs in the effluent was approximately 100 ng L-1. Assume the Dispersivity is 30 cm.
+
+
+
+Did not have time to address this question.
+
+
+
+5a) As I’m sure you recall, the Hydrus 1-D outputs which provide concentrations are providing soil solution concentrations (e.g. ng chemical/cm3 soil solution, in this situation), not soil concentrations. The units are the mass units (e.g. ng) you select to enter and the volume units are based on the length parameters (e.g. cm) you select for the model setup.  If you have an estimate of the soil solution concentration as ng/cm3 from Hydrus 1-D, how would you estimate the soil adsorbed concentration as mass of chemical per mass of soil? 
+
+
+
+The simplest means is to convert the volumetric water content to gravimetric water content, and then compute the mass of chemical per mass of water. This can then be multiplied by the gravimetric water content as a decimal to obtain mass of chemical per mass of soil. The bulk density of the soil must be known:
+
+$$\theta = w \times \rho$$
+
+$$w = \frac{\theta}{\rho}$$
+
+
+
+5b) At approximately what time do the first few ng of PFAs reach the 3000 cm depth? HINT: The way we visualize information may mislead us. Look at the following paragraph before formulating your response.
+Provide the HYDRUS graph in a WORD document which shows concentration in soil solution by depth vs time (use 10 equal time intervals, running the program for 200 days). After looking at the default graphic output, revise the x axis range so that 0.001 ng/cm3 is the maximum concentration shown on the graph rather than the 0.10 ng/cm3 default value of the program. What is the approximate soil solution concentration at the 3000 cm depth after 200 days? Would you have been drawn to the same answer if you had looked only at the default graphic output? Why or why not?
+
+
+
+Did not have time to address this question
+
+
+6) IF you have time, “pontificate” a bit regarding the reason Dr. Wilford Gardner consistently emphasized that what most soil physicists refer to as Flux, is REALLY Flux Density.
+
+The term *flux* only refers to the _amount_ of water discharged through a soil column or profile, without regard to the area through which the water is flowing. For example, a 2" diameter PVC pipe can transmit a lot less water per unit time than a 4" pipe, assuming they contain the same soil with the same hydraulic conductivity. Flux density "levels the playing field" by normalizing the discharge per unit cross-sectional area. 
+
+On a landscape scale, one must consider the exposed area which can potentially be infiltrated (governed by regional geology, i.e. the strike/dip of bedrock and surface slope). This will affect the total amount of water that can flow through the basin.
+
+
+
+
+# References 

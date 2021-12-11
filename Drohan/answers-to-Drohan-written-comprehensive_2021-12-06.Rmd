@@ -1,0 +1,193 @@
+---
+title: "Dr. Patrick Drohan written comprehensive answers"
+author: "Evan C. Mascitti"
+date: "`last compiled `r Sys.time()``"  
+mainfont: Arial
+toc: false 
+output:
+  bookdown::word_document2:
+    number_sections: false
+    reference_docx: "word-template.docx"
+    
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    number_sections: false
+    includes: 
+      in_header: preamble.tex 
+---
+
+```{r setup, include=FALSE}
+library(kableExtra)
+library(purrr)
+library(tibble)
+
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
+```
+
+
+CEC is the degree to which positively charged ions may associate with a soil and diffuse into the soil solution in a reversible process By definition, these ions can be replaced by other ions from the soil solution. This measurement says nothing about the suite of ions present - only the total size of the reservoir. It is typically measure in units of charge per unit mass of soil. AEC is the same measure, but for negatively charged ions. 
+
+____
+
+A common measure to _estimate_ CEC is cation summation. This entails using a strong acid or mixture of acids (such as Mehlich-3) to displace cations of interest on the soil's exchange sites. The displaced cations are captured and quantified. Typically these include plant nutrients including Ca, Mg, and K and also Na and H. Their concentrations are summed and assumed to represent the total suite of cations. This method is quick and accurate for general-purpose soil testing, but it is not a true measure of CEC because it fails to account for cations not measured in the analysis - therefore it tends to underestimate the true CEC.
+
+A second, more precise method involves saturating the soil's exchange sites with a single type of cation. An example is NH~4~^+^. A  buffer solution containing the NH~4~^+^ is used to displace any exchangeable cations, which become waste. The soil is then rinsed to remove excess NH~4~^+^. Next the NH~4~^+^ is displaced and collected by flooding the sample with a different acid. The amount of NH~~4~~^+^ collected serves as the measurement of the total cation exchange capacity/.
+
+
+The core assumption for the cation summation method is that the measured elements comprise the total suite of cations. For the ammonium displacement method, it is assumed that the exchange sites are fully saturated with NH~~4~~^+^ and that all the NH~~4~~^+^ is then displaced by the subsequent acid treatment. Both methods assume that no primary mineral particles are dissolved during the test, as this would over-estimate the cation exchange capacity.   
+
+```{r}
+
+cec_table <- tibble(
+  mineral = c('kaolinite', 'montmorillonite',
+              'goethite', 'humic acid'),
+  `CEC range` = c("5-15", "80-120", "5-10", "180-200"),
+  `AEC range` = c("5-15", "0-10", "0-5", "180-200"),  
+  `structure` = c("1:1 phyllosilicate",
+                  "2:1 phyllosilicate",
+                  "hexagonally close-packed iron hydroxide",
+                  "amorphous organic molecules")
+)
+
+cec_table %>% 
+  kableExtra::kbl(format = 'html') %>% 
+  kableExtra::as_image()
+
+
+# cec_table %>% 
+#   writexl::write_xlsx(here::here("Drohan", "clay-properties.xlsx"))
+```
+
+
+# 2. soil acidity
+
+i) The types of soil acidity include active, exchangeable, and reserve acidity. Active acidity refers to H^+^ cations present in the soil solution. This is measures as soil pH, usually in a 1:1 mass ratio with distilled water. Exchangeable acidity refers to H^+^ and Al^+3^ ions held on the soil's cation exchange sites. These may come into soil solution if the equilibrium between the exchange sites and the soil solution is altered. Exchangeable acidity is usually measured by displacement with a non-acid salt. Reserve acidity comprises H^+^ or Al^+3^  ions when bonded in non-exchangeable forms, often at the surfaces of crystalline clay particles or organic molecules. It could be measured through a total elemental analysis. 
+
+ii)	Why are most soils in the Northeastern United States acidic? Describe the processes that cause soils to become acidic in both natural and managed ecosystems in this environment.   
+
+Soils become more acidic as their base (i.e. non-acid) cations are weathered and removed through leaching. 
+In the Northeastern United States, precipitation exceeds evapotranspiration. Presumably, this has been the case for hundreds of thousands or millions of years. This causes net leaching of cations over the long term. 
+
+Natural rainfall has a pH of about 5.5. Therefore, in the absence of other inputs, soils subjected to prolonged precipitation (i.e. thousands to millions of years) will always become more acidic. This process is hastened by higher CO~~2~~, SO~~x~~, and NO~~x~~ from combustion of fossil fuels by humans. 
+
+Plants produce carbon dioxide through root respiration. Soil microbes also respire CO~2~. As CO~2~ builds up as a soil gas, some dissolves into the soil solution and becomes carbonic acid before further dissociating into bicarbonate and H^+^. 
+
+<!-- Depending on the  -->
+
+<!-- H~~2~~O + CO~~2~~ &Equilibrium; H~~2~~CO~~3 &Equilibrium; HCO~~3~~^-^ + OH^-^ -->
+
+Soil quality and health are large topics and mean different things depending on the problem at hand. I will answer using a general scope of more plant growth and higher biological activity.
+
+Soil acidity can harm plant growth because at low pH, the nutrient balance required for optimal plant growth is disrupted. Desirable nutrients become less soluble and bound as inorganic compounds, while toxic ions such as Al^+3^ become more active in the soil solution. 
+
+Microbial activity (especially that of bacteria) is disrupted as soil pH is lowered. This reduces the soil system's capcacity to process and store carbon and to provide other ecosystem services. 
+
+In extreme cases, soil erosion may accelerate due to soil acidity because plants cannot grow to anchor the soil solids with their roots. 
+
+
+
+Buffering capacity is the soil's propensity to _replace_ active soil acidity once it is neutralized. One could analogize this to an army with many troops in reserve. There is only room for so many troops on the battlefield at a given time. However, if some troops in Army A are killed or wounded, the commanders simply send some more from their Army A reserves. The lime requirement in this analogy would be the opposing troops (army B). The amount of lime needed to "neutralize" the entirety of army A can't really be predicted by the number of Army A troops on the battlefield. One needs also to understand the size of Army A's reserves, which will continue to replace the fallen troops until they are totally depleted. 
+
+
+# 3. Mineralogy 
+
+## Kaolinite 
+
+The unit cell of kaolinite comprises one tetrahedral sheet and one octahedral sheet. These are held together by hydrogen bonds between the exposed hydroxyls of the octahedral sheet and the exposed oxygens of the tetrahedral sheet. 
+
+## Montmorillonite
+
+Montmorillonite is a 2:1 clay, having an octahedral sheet sandwiched between two tetrahedral sheets. It has a low degree of isomorphic substitution, and its net negative charge is 0.2-0.6 per formula unit. The 3-sheet units are held together by exchangeable cations such as Ca^+2^ or Na^+^. 
+
+## Vermiculite
+
+Vermiculite is very similar to montmorillonite. A main difference is the total net negative charge due to substitution. Its charge is 0.6-0.9 per formula unit. This leads to a closer d-spacing in the C-dimension. 
+
+## Illite 
+
+Illite has a similar unit structure to other 2:1 clays - an octahedral sheet sandwiched between two tetrahedral sheets. A significant difference is that the sheets are held together by K^+^ ions. Also, there is a greater degree of isomorphic substitution (usually Al^+3^ for Si^+4^ in the tetrahedral sheet), leading to higher net negative charge. These K^+^ ions fit snugly in the lattice and "close off" the surfaces of the tetrahedral/octahedral sheets. Because of the combined effect of higher charge and the good fit of K^+^, the bonds holding the sheets together are stronger than those provided in other 2:1 clays. 
+
+
+## Properties + limitations for use in a turfgrass rootzone
+
+There are two classes of properties usually described for clays. Physical properties relate to the relationship of the soil with water, and the soil's bulk response to applied loads. Chemical properties relate to the soil's interactions with organic and inorganic materials. 
+
+In general, the greater the surface area and surface charge, the higher the clay's affinity for water. This leads to higher stiffness and a larger plasticity index (the range of water content over which the soil can be shaped and molded). It also means that the soil will hold water very tightly, potentially making it unavailable to plants. All real soils are different due to differences in particle size distribution and particle shape, but _in general_ the 4 minerals listed above could be classified by their affinity for water. The order would _generally_ be vermiculite > montmorillonite > illite > kaolinite.
+
+
+
+I would not recommend using clay as a "turf base."The primary reason is that clay soils tend to have low aeration porosity, especially when heavily trafficked, as turfgrass plantings tend to be. When clay soils dry, their mechanical strength will limit root growth. When moist, they hold less plant-available water than might be commonly presumed - much of the water is held at a tension too high for plants to extract. 
+
+ii)	Why is K not easily leached in mica versus smectite? 
+
+In a mica/illite mineral, the K^+^ ions are not exposed to the bulk soil solution. They are confined to the small space between adjacent 2:1 packets. Therefore, the K^+^ is considered to be "fixed" or "non-excnahgeable." This K^+^ will be detectable with a total/bulk elemental analysis, but not with a standard CEC test. In smectite, the lower mineral charge allows other cations from the soil solution to enter the inter-layer space and displace any K^+^ ions held at the exchange sites. 
+
+
+iii)	At what point does clay content limit turf growth?
+
+
+There is no single value of clay content which limits turf growth. The answer to this question also determines whether one is managing a fine-textured soil as the rootzone, or whether an engineered rootzone has been imported. 
+
+In the case of an artificially-constructed profile, one usually aims to completely eliminate clay from the mixture. High-performace turfgrass rootzones are normally constructed with sand of specific particle sizes. Organic amendments are the most popular means to increase the amount of plant-available water. Clays are not recommended because they are difficult to homogenize. If too much is added, or the blending is not uniform, severe drainage problems can result and require total replacement of the rootzone. The most widely-used specification is the United States Golf Association \underline{Recommendations for putting green construction}. This specification permits a maximum clay content of 2% by mass. 
+
+For a sward of turfgrass planted in "native" soil, the clay content itself is not the limiting factor. One cannot easily alter soil texture because of the large quantity of material needed to materially reduce clay-size content. A better approach is to improve soils structure via additions of labile organic matter and mechanical aerification. 
+
+
+# 4)	Carbon and Nitrogen
+
+i) Carbon and nitrogen dynamics are somewhat accelerated in a turfgrass rootzone compared to unmanaged soils. There are two main reasons: 1. Juvenile turfgrasses are highly efficient at depositing organic matter below the soil surface in the form of roots and rhizomes, and 2. Rapid growth is encouraged through the addition of N-containing fertilizers. A third factor is the potential removal of N through clipping harvest. This is only practiced on a small fraction of all managed turfgrass, but it is critical variable in the C:N cycle.
+
+
+See the diagram below for factors which affect both natural and turfgrass systems. Factors which have a larger influence in turfgrass systems are marked with one or two stars. Those having a smaller influence in turfgrass systems are marked with an "x."
+
+In well-managed turfgrass systems, both leaching and denitrification are relatively small sinks for N. Turfgrasses are highly efficint at assimilating free soil N into plant biomass, and in well-aerated soils denitrification is minimial. The net C/N balance fluctuates over the lifetime of a turfgrass sward. It is currently believed that a newly established turf will serve as a net C and N sink for its first ~ 30 years. After this age is reached, the system reaches an equilibrium in which C and N are relatively stable because mineralization of N through organic matter stimulates new growth an the overall accumulation/breakdown balance is roughly equal. 
+
+
+
+```{r c-n-diagram, fig.cap="C and N cycles for turfgrass vs. natural soil systems", out.width='95%'}
+knitr::include_graphics(path = here::here("Drohan", "C-N-cycle.png"))
+```
+
+
+
+ii) The C and N cycles are linked through the utilization of these elements by life forms, including both plants and microbes. Each organism uses C and N in different amounts. Often, one will be limiting for a specific organism. This puts a limit on that species' growth until more of the limiting nutrient is added. The other element will continue to accumulare unless consumed by another organism with a different favored C:N ratio.
+
+iii.) I will continue with the theme from question 4 ii) here. A C:N ratio of around 10:1 favors an equilibrium in which both microbes and plants can thrive. This ratio allows for breakdown of dead organic matter, releasing enough N for plants to use after allocating enough for the microbes to persist. 
+
+iv) In most soils the C:N ratio decreases with depth. This is because plants live at the surface, and they deposit roots and stems into the soil at a limited depth. Nitrogen is more mobile and can be easily translocated downward by percloating waters, especially when nitrified to NO~~3~~^-^ from NH~~4~~^+^
+
+
+#5) 
+
+
+The primary variables that could be affected by people are the additions of fertilizers and water. Fertilizers contain mineral nutrients (soluble and insoluble). 
+
+
+The parent material of a soil plays a large role in governing which minerals may form. However, I would not consider this an edaphic factor because my understanding of the term _edaphic_ is to relate to the management of soil for human utility. Threfore, I will focus on temperature and moisture. 
+
+
+
+Mineral weathering (and all equilibrium reactions) proceed faster with increasing temperature. Therefore one could expect the transitions along the Bowen reaction series to occur more rapidly in warmer climates. A warmer climate would yield 1:1 minerals (kaolinite) and sesquioxies sooner than would a cooler climate. 
+
+
+Moisture also drives soil mineralogy. Soil moisture depends on inputs (precipitation and irrigation) and outputs (leaching and evapotranspiration). Adding water might accelerate leaching of soluble nutrients, which could hasten weathering of primary minerals and lower the soil pH. However, if the water is alkaline and contains bicarbonate, this can reverse the acidification process, and potentially form carbonate soil cements.
+
+
+Temperature and moisture interact. 
+When temperature is limiting, additional soil moisture is not likely to "speed up" weathering of minerals. However, this will favor retention of base cations and the formation of 2:1 clays which contain Fe, Mg, Ca, and other ions not found in the more weathered minerals like kaolinite and the Fe and Al oxi-hydroxides. 
+
+
+Finally, to complicate matters further, clays are often used as carriers in manufactured fertilizers. Although it is a relatively small input, one could technically consider this as an alteration of the soil parent material. 
+
+
+
+
+# 6)
+
+To unpack the information contained in this soil's name, it is best to begin at the end of the name. This contains the most general information about the soil. 
+
+The Upshur is an alfisol. This means it was formed under forest vegetation, and it has a base saturation of >35%. It exists in an udic (humid) moisture regime, and the prefix 'Hapl' indicates it is a relatively straightforward soil profile without anomolous features. Typic also indicates that the Upshur represents most features typical of an Alfisol without any extra defining traits. 
+
+The other modifiers provide additional information about the soil materials and the climate in which the soil exists. Mesic indicates a moderate soil temperature regime (mean annual temperature of 8-15&deg;C). Superactive indicates a high CEC, mixed indicates that there are a variety of soil minerals present, and fine means the soil has a silty or clayey texture with few rock fragments and little sand. 
+
+This soil is quite different from a Vertisol. Vertisols are formed in drier climates (not an udic moisture regime) which favor grasses over trees. They tend to be calcareous. However, the Upshur does share some features with Vertisols - a fine particle size family, and high CEC (>0.60 meq per % clay). However, Vertisols tend to contain a higher percent of expansive clays (which contribute to their formation via shrinking and swelling cycles) rather than a mixed mineralogy. 

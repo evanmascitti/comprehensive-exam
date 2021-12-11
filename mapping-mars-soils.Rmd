@@ -1,0 +1,26 @@
+---
+title: "A strategy for mapping Martian soils"
+author: "Evan C. Mascitti"
+output: html_document
+---
+
+# First consider the goal of making the map
+
+If the rationale is pure knowledge, one will likely choose different strategies than if the map is being made for practical use. Current events suggest private companies may pursue the exploration and potential colonization of Mars more rapidly than nation-states. 
+
+In the former case, soil properties relevant to commercial exploitation of minerals, water, and other and other inorganic resources will likely be given priority. In the latter case, genetic soil properties will be given more emphasis. Martian soils offer an unprecedented chance to study pedogenesis in an environment wholly different from the extant conditions on Earth. In either case, the immediate concerns of the first cursory mapping effort must focus on soil properties relevant to human survival. These could include:
+
+1. ease of excavation (for constructing a subterranean shelter for radiation shielding)
+2. presence of permafrost (as a possible source of meltable water)
+3. engineering properties (compressibility, shear strength)
+4. chemical properties amenable to plant growth (pH and nature of base cation suite)
+
+Pedogenic processes on Mars are not fundamentally different from those operating on Earth. By definition, the nature of physical laws must operate by the same principles and mechanisms everywhere in our universe [@Feynman1965]. Yet the _specific_ processes which dominate pedogenesis on Mars are likely much different from those on Earth. 
+
+Even on Earth, few intitiaves are developed with a "pure science" paradigm. Soils were first mapped on our planet with agricultural and geopolitical incentives. On Mars, a similar strategy will proabably be assumed, with human survival and welfare as a starting point but with a strong emphasis on the development of basic knowledge. The mechanics of of the pedological investigation should be threefold:
+
+1. Classify soils in a hierarchical way. 
+
+The broadest distinction should be soil thickness. This is a simple property to measure with remote sensing equipment, and it immediately disqualifies areas with inadequate thickness of unconsolidated material. This also yields clues about the origin of the soil. There is ample evidence to suggest water has previously existed in all three of its phases, and is then possible that material has been transported by the same vectors as on Earth (wind, flowing liquid water, flowing glacial ice, and gravity). The thickness of soil does not uniquely define the origin of a soil's parent material, but it may yield clues as to whether the parent material's provenance. 
+
+2. The second distinction should be made on the basis of the presence or absence of permafrost. This property will affect the availablity of water for human survival and also provide indicators about the soil's past. It provides a snapshot of the water flux, though no certainty can be gleaned about the dynamics of water mass-balance through deep time. 

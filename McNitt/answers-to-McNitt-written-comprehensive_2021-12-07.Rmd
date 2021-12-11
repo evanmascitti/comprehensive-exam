@@ -1,0 +1,199 @@
+---
+title: "Dr. Andy McNitt written comprehensive answers"
+author: "Evan C. Mascitti"
+date: "`last compiled `r ecmfuns::ecm_timestamp()``"
+mainfont: Roboto
+bibliography: library.bib
+linestretch: 1.25
+colorlinks: true
+linksasnotes: false
+linkcolor: blue
+urlcolor: blue
+toc: false 
+output:
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    number_sections: false
+    includes: 
+      in_header: preamble.tex 
+---
+
+\begin{qfont}
+1.	It is common to see a five pound per M upper limit for applications of elemental sulfur to high cut turf. It is sometimes stated that higher rates will result in turf burn. What is the mechanism for phytotoxicity of elemental sulfur to turfgrass? 
+\end{qfont}
+
+
+\vspace{10mm}
+
+Elemental sulfur (S~2~) is transformed by aerobic soil microbes into sulfuric acid:
+
+
+$$S_2 + 3O_2 + 2H_2O + bacteria \rightarrow ~ 4H^+ ~  2SO_4^- $$
+
+
+
+This reaction generates 2 moles of acid per unit S~2~. The anion SO~4~^-^ is released to the soil solution. 
+
+
+The reaction is governed by soil temperature, which moderates soil microbial activity. Therefore, burn is likely only when soil temperatures are conducive to rapid oxidation of the sulfur.
+
+
+Here are three possible mechanisms for the phytotoxicity:
+
+1. Rapid release of acidity (protons/hydronium) which directly denature the turfgrass tissues. 
+
+
+1. The localized but rapid and extreme reduction in rhizosphere pH could immobilize other essential nutrients (namely Fe and P) for a short period. The low pH might also mobilize free Al^+3^, which is toxic to plants. 
+
+
+1. Excess SO~4~^-^ ions entering the plant and disrupting biochemical pathways. 
+
+
+I feel reasonably confident that the first item above is the most important mechanism. I have never heard of an anion causing direct toxicity (I'd expect it to leach or diffuse readily), and nutrient deficiencies like P or Fe usually manifest as more specific symptoms rather than total yellowing/desiccation or "burn" of plant tissues. 
+
+
+____
+
+
+<!-- \vspace{10mm} -->
+\clearpage
+
+\begin{qfont}
+
+
+2.  Here is a link to the current requirements for the BS in turfgrass science. This link \url{https://bulletins.psu.edu/undergraduate/colleges/agricultural-sciences/turfgrass-science-bs/#programrequirementstext} outlines the program requirements. 
+
+Attached are the general turf science supplementary courses for both Professional Ag and Professional Management and the supplementary courses if a student would choose to do a turf science – science option typically in preparation for an advanced degree. 
+
+Review and comment on the appropriateness of this curriculum and suggest alterations and/or improvements.
+
+
+\end{qfont}
+
+
+\vspace{10mm}
+
+
+To address this question, I first wish to briefly digress on the aims of higher education. I will comment on higher education in general, and on turfgrass science in particular. 
+
+The first European universities (and their future American counterparts) saw higher education as a means for training clergy and developing moral character. 
+As more universities were founded, and as economic and cultural circumstances changed, these institutions usually focused on one of three missions: 1) vocational or technical training (the land grant schools); 2) research; or 3) liberal arts education [@Carey2016]. 
+
+
+
+Most modern universities comprise a hybrid of these 3 objectives. I feel fortunate to have attended both a small liberal arts college and a large R-1 university which _also_ happens to be a land-grant institution. This has helped me appreciate the value of all 3 institutional aims I believe that theoretical knowledge should be valued for its own sake, but that it is most valuable when it merits application. Equally, I feel that professionals should become educated beyond their immediate practical needs. Short-changing either of these goals risks the creation of a workforce unprepared to survive and adapt in an unpredictable future. 
+
+
+<!-- where teaching quality is how professors are judged.  -->
+At institutions like Beloit College,  learning for its own sake is a sacred cow. These colleges market themselves under the premise that the purpose of college is to develop one's critical faculties and see the world as a web of interconnectedness. I truly loved this way of learning, and I certainly "drank the kool-aid" while I was in college there.  However this style also leaves many students "holding the bag," with few tangible job skills at graduation. I wouldn't trade my liberal-arts education for something else, but I've also learned the value of a more vocationally-focused curriculum. I think that Penn State offers a strong blend of these two ideals. 
+<!-- It risks ignoring the fact that not everyone can simply think for a living - most of us must _produce_ goods, services, and knowledge itself.  -->
+
+
+
+I realize this is not yet a direct answer to the question (this will follow below). I am sharing the above because my own life experiences have shaped my views on higher education and its purpose. I understand first-hand the merits and joys of a liberal-arts education, but I also resent the lack of practical skills and training I received. The vast majority of my peers at Beloit went on to grad school or found jobs not using their major. No professor ever explained to me that I might land a well-paying and fulfilling job as an industrial geologist. Instead, I sought a career in the turf business because it seemed a clearer path forward. 
+
+
+Turfgrass is by nature an interdisciplinary subject. It involves plants, microorganisms, soils, and of course people. 
+This highly specialized topic requires both specific technical knowledge and the ability to think more broadly. 
+Having only attended graduate school at PSU, answering this question is the first time I have ever actually perused the requirements to obtain a B.S. degree here. 
+
+
+I was pleasantly surprised at the breadth of courses required. I honestly believe many of these courses are more important to a student's long-term success than deep technical expertise in turfgrass science. Cultivating turf at a commercial facility (golf course, sports field, or landscape) requires more dealing with people than dealing with grass. This is not to say the grass is not important, but the reality is that our profession has historically not been viewed as a "profession." To change that, we must go beyond wanting to simply care for turf.  
+
+
+In light of my soapbox above, I feel these are the most important skills for a turfgrass science student to have:
+
+
+1. Interact with other people effectively in the workplace 
+
+
+1. sound knowledge of turfgrass biology, soils, and pests
+
+
+1. operate and maintain equipment. 
+
+
+1. understand one's role in operating the larger business or organization
+
+
+
+
+
+# Strengths of existing curriculum
+
+
+Below are what I consider to be some strengths of the existing curriculum. They are not in any particular order. 
+
+1. Requirements for statistics. Our modern world revolves around data, yet most adults are highly innumerate [@Paulos1988]. Information is always scarce, but statistics help us make objective judgements about the world. In specific, interpreting claims about products is an important part of a turfgrass manager's job. Statistics are a weapon in this battle. 
+
+
+1. Requirement to take AGBM 106 and the option to take other business courses for credit. Most turfgrass managers work as part of a business. Knowing how turfgrass culture fits in the organization's larger scope is important for a turf manager's effectiveness....and his or her personal sanity! For example, outside events become more palatable when it is clear what role they play in financially sustaining the operation and its employees. 
+
+
+1. Requirement of technical writing (ENGL 202). Written communication is so important - if one's writing is not professional, a turf manager's standing with higher-ups is unlikely to improve.
+
+
+1. Most elements of turfgrass culture are treated thoroughly- cultural practices, soils, and pest management. I think there is an appropriate amount of overlap between the classes - enough that a student can see how they fit together, without wasting one's time and money by covering the same material multiple times. 
+
+
+1. The irrigation class is a very practical and useful topic. As the saying goes, "it's not irrigation, it's irritation." Mastering this part of turf management is really important, especially as manicured turfgrass (rightly) faces increased scrutiny from society. Students speak very highly of Brad, who takes a very active approach to teaching. I wish I'd had the chance to take this class as a younger student. 
+
+
+1. Mandatory internship. To me this is almost so obvious it doesn't need to be mentioned - but the hands-on training is a critical part of producing a skilled graduate. No amount of classroom training can replace the experience gained while actually caring for turf. It's great that this is enforced as part of getting the B.S. degree. 
+
+
+# Suggestions for improvement 
+
+The following points are items which I believe could improve the preparedness of turf students for their careers:
+
+1. Addition of a general turfgrass physiology course. While there are multiple plant physiology courses at PSU, my guess is that these are geared toward future researchers and dwell heavily on cellular and molecular mechanisms.
+Turf is a special crop, and students may have difficulty relating things learned about agricultural commodities to their specific area. My guess is that this course is not taught at PSU because the current turf faculty does not contain a PI qualified to teach it. I suspect that recent faculty searches have even considered this, and maybe the stars just haven't aligned. 
+
+
+1. Requiring the SOILS 102 lab in addition to SOILS 101 lecture. Soil science (though it is my personal favorite) is viewed by many as a boring topic. I believe the lab helps reduce this perception. Soil science is tactile by nature and not well-suited to a large lecture hall as the main delivery mechanism. TURF 434 and 435 cover some of the SOILS 102 topics in more detail, but I believe turf students would benefit from being exposed sooner. Obviously I don't have any data on how many are already taking it anyway. But I think this simple nudge would be met with little resistance among those who are studying turf. 
+
+
+1. Initiation or revival of a course on powered equipment. I seem to recall hearing that this used to be a required course but was removed at some point. I see that ASM 210 is listed on the approved courses for the Professional Science option, but I think this should be required. I am not talking about a class where the students are taught how to drive a mower or clean out a sprayer. These skills are best learned "on the job," outside of the classroom. Here, I primarily mean a course about _how equipment works_. No amount of technical knowledge about turf can substitute for the capacity to repair and modify turf equipment. One can surely become an excellent operator without really knowing how a machine works. Breakdowns are inevitable, and in a fast-paced environment, the ability to get a piece of equipment "back on line" can be the difference between success and failure. 
+Like most topics, if the fundamental principles of machines are grasped (hydraulic power systems, internal combustion engines, electical connections) are mastered, nearly any specific problem can be solved. Maintaining equipment is a huge part of most turfgrass managers' jobs. Even if one is lucky enough to have a full-time mechanic, the job merits an appreciation of what is happening "under the hood" (pun intended). I know that this is a personal deficiency of mine. I have intentionally sought out chances to learn more about equipment, but I wish I'd had the chance to grasp the fundamentals earlier in life. 
+
+
+1. Requiring a course on psychology and/or cognitive biases. Actually, I think all students (not just turfgrass majors) should receive such training. By "bias," I do not refer to racial or gender prejudice, but to the deficiencies in the way all humans tend to think. Here is an example: [Prof. Steven Pinker- Introduction to Psychological Science](https://stevenpinker.com/classes/psychological-science-science-living-systems-20). I looked through the PSU catalog and didn't find an exact equivalent, but PSYCH 256 covers some similar concepts. 
+
+One could see this topic as having more to do with personal growth than a professional skill, but I argue against that view. Understanding human thought and behavior is our only way to work effectively as a team. Even when working alone, being aware of the origins and limitations of one's own perception is important for maximizing the quality and efficiency of our work. 
+
+Personally, I've only become more aware of the deficiencies in my own cognition through experience and some painful misunderstandings. Realizing that this was a whole field of study (popularized by [D. Kahneman](https://en.wikipedia.org/wiki/Daniel_Kahneman) and [A. Tversky](https://en.wikipedia.org/wiki/Amos_Tversky)) - and that we can improve our thinking by understanding how it works - was a big eye opener for me. 
+
+I see that there are some _similar_ courses in the Turf major, which count toward the Professional Management and Economics option (for example, LER 202 Understanding Employee Behavior or RPTM 210, Leisure and Human Behavior) but these again these are optional and not really what I am referring to. PSU already requires 6 credits of Social and Behavioral Sciences, but maybe the turf major could "nudge" students toward taking psychology.
+
+
+### A final, general comment: 
+I believe students would benefit from giving more presentations in turf classes. Having taken a few turf classes during my M.S., I don't ever remember being required to speak in front of the class. I feel grateful that this was required in the vast majority of my classes at Beloit. I don't consider myself an expert speaker, but I'm definitely not afraid of public speaking and I feel equally competent at expressing things to both technical and non-technical audiences. I attribute that confiddence not to any special ability, but to having done it a lot in college. 
+
+I harped above on the importance of written communication, but oral communication is probably even more important in the turf business. I doubt very much that general managers and team executives _ever_ read technical reports or proposals in full, no matter how well-written they are. Bosses are busy, and they often want to be told things directly instead of reading a long document. 
+
+A huge difference can be made by a compelling presentation, or even a few well-articulated sentences during a regular conversation. These are often the only chances turf managers have to plead their cases to upper managment. I would like to see students have to speaking skills while they are still in school, rather than on the job when much more is riding on their performance.
+
+
+
+
+<!-- One advantage conferred by attending a large university like PSU is the range of courses available. At Beloit, I could never have dreamed of so many choices. -->
+
+# Summary
+
+In my (admittedly limited) interactions with Penn State undergraduates, many view "general education" as a burden to be endured, not a useful end itself. I believe that this is a mistake, and I am pleased to learn about the options and electives for the Turfgrass Science major. 
+
+There is always a trade-off between granting agency to students and the more paternalistic approach of a mandatory curriculum.
+I made some suggestions above, but I also recognize that simply requiring more classes is not a panacea or even the right choice for all students. 
+
+Finally, there is no question that deep knowledge of turfgrass science is critical to be a good turf manager. However, the reality is that turf is only a small part of the job. Therefore, if I had to make one general suggestion from this exercise, it is not really about the turf classes. Rather, it would be to more thoughtfully curate the optional courses in the three options. The lists are very long and students could perhaps use more guidance to ensure they receive enough training in the "human element" and "soft" skills. These are utterly important for a professional turf manager. They help an individual thrive in his or her role, and they help ensure that as a group, we turf managers are not viewed by our employers as Carl Spacklers. 
+
+
+
+
+
+
+
+<!-- Penn State provides a more "mass-market" approach to college degrees. One could argue that students slip through the cracks but it is much more su -->
+
+
+# References 

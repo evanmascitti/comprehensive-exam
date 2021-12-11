@@ -1,0 +1,22 @@
+---
+title: "Studying for Dr. Qiu comps possible questions"
+---
+
+The 13 differences between coarse-grained and fine-grained soils:
+
+1. Fine grained: behavior highly dependent on water content 
+1. fine-grained: can be plastic
+1. fine grained behavior determined by surface force + contact force rather than contact force and gravitational forces
+1. fine-grained: platy shape vs bulky shape 
+1. fine-grained: contains clay minerals
+1. fine-grained: not dimensionally stable 
+1. coarse-grained: resistant to mechanical breakdown; fine-grained: resistant to chemical weathering 
+1. fine-grained: small voids
+1. fine-grained: high specific surface area
+1. fine-grained: high surface charge 
+1. fine-grained: low conductivity
+1. fine-grained: high capillary pressure when unsaturated 
+1. fine-grained: un-drained loading dominates 
+1. fine-grained: easier to obtain "intact" core specimen
+1. fine-grained: properties determined by composition in addition to size and shape 
+

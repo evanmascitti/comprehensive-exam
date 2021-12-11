@@ -1,0 +1,21 @@
+---
+title: "A plan to prepare for my comprehensive exam"
+date: "Outlined 2021-03-17; last compiled `r Sys.Date()`"
+---
+
+## Topics to review 
+
+```{r study-topics-tab, fig.cap='Topics to review from classes'}
+suppressPackageStartupMessages(suppressWarnings(library(tidyverse)))
+# choose random seed 
+# sample(1e8, 1) yielded 58529676
+set.seed(58529676)
+table <- readr::read_csv("study-topics_2021-03-17.csv", col_types = "cc") %>% 
+  slice_sample(prop = 1) %>% 
+  dplyr::mutate(week = 1:length(.$topic),
+                study_date= format((Sys.Date() - 2) + week*7, "%a. %b %e")) %>% 
+  dplyr::select(-week) %>% 
+  kableExtra::kbl(col.names = c("Instructor", "Topic", "Study date")) %>% 
+  kableExtra::kable_styling()
+
+table

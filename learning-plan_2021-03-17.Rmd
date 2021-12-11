@@ -1,0 +1,16 @@
+---
+title: "A plan to continue learning and studying during 2021"
+date: "Outlined 2021-03-17; last compiled `r Sys.Date()`"
+---
+
+## Topics to learn about 
+
+- see ongoing to-do list. Some computational stuff, but also papers on history
+of soil science, etc.
+
+- Additional goal of reading 2 papers per week for the next 25 weeks; that's 100 in total. 
+
+
+```{r learning-topics, fig.cap='Topics to learn about this year'}
+
+```

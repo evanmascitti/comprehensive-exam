@@ -1,0 +1,109 @@
+---
+title: "Things to study and learn about"
+date: "begun 2020-12-16 ; document last compiled `r ecmfuns::ecm_timestamp()`"
+---
+
+## Onoing learning - overview 
+
+I started this list after reading about Goodhart's Law in Micah Woods' blog. He seems to know about so many of these ideas and euphanisms, and I'd like to learn more of them. So I am keeping track of concepts, skills, and ideas with which I'd like to become better acquainted. 
+
+I also need to keep better control over the number of tabs open in my internet browser. 
+
+This document will help me keep track of things I want to do, without having them all floating around in my head at once.
+
+An additional goal for 2021 (beginning March 17) is to read 2 journal papers per week for the next 25 weeks; that's 100 in total. 
+
+
+## Concepts and ideas
+
+### Goodhart's Law
+
+[Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law) roughly states that by trying to achieve a very specific goal (especially a number), it is easy to lose sight of what the real goal is. Don't worship a number just for its own sake. 
+
+>"When a measure becomes a target, it ceases to be a good measure."
+
+
+## Computing
+
+
+#### the [targets package in R](https://books.ropensci.org/targets/walkthrough.html)
+
+This is like a Makefile but specifically for R. It minimizes computation time and provides a solid trail of breadcrumbs between data, code, and output. 
+
+#### Color 
+- palettes for data visualizaton in the [**khroma** package](https://khroma.tesselle.org/index.html)
+- Measuring color differences with R:[this paper](https://peerj.com/articles/6398/?utm_source=TrendMD&utm_campaign=PeerJ_TrendMD_0&utm_medium=TrendMD) and [this one](https://peerj.com/articles/5727/?utm_source=TrendMD&utm_campaign=PeerJ_TrendMD_0&utm_medium=TrendMD)
+
+#### unit testing of code 
+[A primer](https://b-rodrigues.github.io/fput/unit-testing.html)
+[Hadley book](https://r-pkgs.org/)
+
+#### Using wep APIs to gather data from the internet
+
+- the HTTR package lets you build custom requests if you know the individual API
+- some APIs already have specific packages built for them
+- twitter data for baseball dirt people 
+  - related: text mining/sentiment analysis
+- fitbit data with the the [**fitbitr** package](https://github.com/teramonagi/fitbitr)
+- analyzing the performance of my own individual investments and Motely Fool recommendations vs the broader market indices
+
+### Data visualization 
+
+[Claus Wilke's book](https://clauswilke.com/dataviz/)
+
+### Shiny apps 
+
+[Hadley's book](https://mastering-shiny.org/) -  so far I have read through Ch. 6
+
+### Python
+
+[Video on using R and Python together](https://rstudio.com/resources/webinars/rstudio-a-single-home-for-r-and-python/)
+
+### SQL
+
+### Bash/Linux
+
+## Professional development 
+
+### Giving presentations 
+
+- Designing slides (https://speakerdeck.com/mseckington/the-art-of-slide-design?slide=48)
+- [Jeff Leek's Article on how to give good talks](https://github.com/jtleek/talkguide)
+- Books: 
+  - [Presentation Patterns: Techniques for Crafting Better Presentations ](https://www.amazon.com/dp/0321820800/ref=cm_sw_su_dp)
+
+  
+## Cooking 
+
+- [Cuts of beef](https://fullofsteak.com/beef-cuts-explained/)
+- [America's Test Kitchen Cooking School](https://www.onlinecookingschool.com/learn/course/all-about-spices/introduction/lesson-overview)
+- [Stanley Tucci tour of Italy series](https://go.cnn.com/vod)
+- [State College farmer's market online](https://statecollegemarket.com/)
+
+## Science/work topics
+
+- fitting curves and distributions (mainly for particle size but also other data)
+
+- [Good resource on types of non-linear models that are commonly used in earth science](http://maps.unomaha.edu/maher/GEOL2300/week10/exp.html)
+
+## History
+
+World War II: [finish Ken Burns documentary](https://video.alexanderstreet.com/watch/a-world-without-war?context=channel:ken-burns)
+
+## Miscellaneous long-form articles 
+
+[Michael Pollan on eating meat](https://www.nytimes.com/2002/11/10/magazine/an-animal-s-place.html)
+
+## Books to read 
+
+- see Word doc until I can compile into a table here with `kableExtra::kbl()`
+
+```{r eval = F}
+# put books into a csv file 
+# books_to_read <- readr::read_csv()
+```
+
+## Projects for fun 
+
+- compile investments with R 
+- the infamous "April study" on Phillies records for Dad - an excuse to learn more with the baseballr package and SQL
