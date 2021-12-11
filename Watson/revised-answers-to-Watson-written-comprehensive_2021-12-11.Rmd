@@ -255,7 +255,7 @@ knitr::include_graphics(hydrus_graph_paths[[7]])
 
 ### Answers using graphs 
 
-- The water content at the 3000 cm depth (30 m) equals the water content above it between 40 and 50 days. I asked HYDRUS to print information on 10-day intervals, and the water content increases nearly to saturation at this time and depth (see \@ref(fig:every-1-0-days-water-content))
+- The water content at the 3000 cm depth (30 m) equals the water content above it between 40 and 50 days. I asked HYDRUS to print information on 10-day intervals, and the water content increases nearly to saturation at this time and depth (see \@ref(fig:every-10-days-water-content))
 
 ```{r every-10-days-water-content, fig.cap="Printing every 10 days to show water content as a function of depth and time"}
 knitr::include_graphics(here::here('Watson/hydrus/watson-comprehensive/revised-water-flow-graphs/extra-graphs_01-water-content-printed-every-10-days.png'))
@@ -266,9 +266,6 @@ knitr::include_graphics(here::here('Watson/hydrus/watson-comprehensive/revised-w
 5) Assume that the PFAs don’t degrade. (These are often referred to as “forever chemicals” which degrade very slowly under natural conditions)! 
 Run HYDRUS 1-D again but this time include chemical transport, using estimated, average values for the sorption coefficients (2.5 L/kg = 2.5 cm3/g OC) of the PFAs referenced above (so assume PFOA and PFOS behave exactly the same) and assume that the SUM TOTAL concentration of the PFAs in the effluent was approximately 100 ng L-1. Assume the Dispersivity is 30 cm.
 
-
-
-Did not have time to address this question.
 
 
 
@@ -295,8 +292,15 @@ ___
 Provide the HYDRUS graph in a WORD document which shows concentration in soil solution by depth vs time (use 10 equal time intervals, running the program for 200 days). After looking at the default graphic output, revise the x axis range so that 0.001 ng/cm3 is the maximum concentration shown on the graph rather than the 0.10 ng/cm3 default value of the program. What is the approximate soil solution concentration at the 3000 cm depth after 200 days? Would you have been drawn to the same answer if you had looked only at the default graphic output? Why or why not?
 
 
+It appears that the concentration reaches 0.1 ng cm^3^ after about 100 days. I'd be able to tell better if I could re-size the axis, but can't figure out how to do this, or how to export the data. 
 
-Can't figure out how to change axis limits....I suppose what you are getting at is that the concentration might be continuing to change, even though the graph does not show this at the default scale. 
+
+<!-- Can't figure out how to change axis limits....I suppose what you are getting at is that the concentration might be continuing to change, even though the graph does not show this at the default scale.  -->
+
+
+```{r}
+knitr::include_graphics(here::here("Watson/hydrus/watson-comprehensive/solute-transport-graphs/solute-contentration-200-days-10-print-times.png"))
+```
 
 
 6) IF you have time, “pontificate” a bit regarding the reason Dr. Wilford Gardner consistently emphasized that what most soil physicists refer to as Flux, is REALLY Flux Density.
