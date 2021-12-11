@@ -4,4 +4,4 @@
 # comprehensive-exam
 
 [Revised Watson
-questions](./Watson/revised-answers-to-Watson-written-comprehensive_2021-12-11.html)
+questions](https://evanmascitti.github.io/comprehensive-exam/Watson/revised-answers-to-Watson-written-comprehensive_2021-12-11.html)
