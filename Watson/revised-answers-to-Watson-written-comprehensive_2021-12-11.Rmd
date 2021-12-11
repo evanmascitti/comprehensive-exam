@@ -28,7 +28,7 @@ output:
 knitr::opts_chunk$set(
   echo = FALSE,
   fig.align = 'center',
-  ot.width = '80%')
+  out.width = '80%')
 
 library(purrr)
 library(magick)
