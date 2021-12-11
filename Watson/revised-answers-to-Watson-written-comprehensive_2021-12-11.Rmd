@@ -292,7 +292,12 @@ ___
 Provide the HYDRUS graph in a WORD document which shows concentration in soil solution by depth vs time (use 10 equal time intervals, running the program for 200 days). After looking at the default graphic output, revise the x axis range so that 0.001 ng/cm3 is the maximum concentration shown on the graph rather than the 0.10 ng/cm3 default value of the program. What is the approximate soil solution concentration at the 3000 cm depth after 200 days? Would you have been drawn to the same answer if you had looked only at the default graphic output? Why or why not?
 
 
-It appears that the concentration reaches 0.1 ng cm^3^ after about 100 days. I'd be able to tell better if I could re-size the axis, but can't figure out how to do this, or how to export the data. 
+It appears that the concentration reaches 0.1 ng cm^3^ after about 100 days. I'd be able to tell better if I could re-size the axis, but can't figure out how to do this, or how to export the data. I tried opning the tab-delimited file `solute-1.out` but there is no metadata about what the column names mean, and it's not formatted in a way that makes it easy to parse either using Excel or R. 
+
+
+```{r out.width='90%'}
+knitr::include_graphics(here::here("Watson/hydrus/watson-comprehensive/solute-transport-graphs/solute-contentration-200-days-10-print-times.png"))
+```
 
 
 <!-- Can't figure out how to change axis limits....I suppose what you are getting at is that the concentration might be continuing to change, even though the graph does not show this at the default scale.  -->
